@@ -1,0 +1,85 @@
+body {
+  background-color: white;
+}
+
+.responsive {
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  height: 100vh;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.slider {
+  position: relative;
+  font-family:Arial;
+  width:90%;
+  display:block;
+  margin:0 auto;
+  height: 165px;
+}
+
+.slider img {
+  margin: 1rem;
+  position: relative;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+img:hover {
+  opacity: 0.7;
+}
+
+#gallery img {
+  width: 330px;
+  height: 150px;
+}
+
+/* The Flyout element */
+
+#flyout {
+  width: 150px;
+  height: 100px;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  margin-top: 20px;
+  margin-right: 20px;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 1rem;
+}
+
+#flyout img {
+  width: 150px;
+  height: 100px;
+  border-radius: 1rem;
+}
+
+/* Animation for the flyout */
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* Special classes for animation */
+
+.animated {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+.hidden {
+  display: none;
+}
