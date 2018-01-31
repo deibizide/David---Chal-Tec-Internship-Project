@@ -24,25 +24,27 @@ $(document).ready(function(){
 $('img').on('click', function() {
   let src = '';
   let clickedSrc = '';
+  let flyout = $('#flyout');
 
-  $('#flyout').removeClass('hidden')
-  $('#flyout').addClass('animated')
+  flyout.removeClass('hidden')
+  flyout.addClass('animated')
 
   clickedSrc = $(this).data('imgsrc')
   src = `${clickedSrc}.jpeg`
 
-  $('#flyout img').attr('src', src)
-
-// Removing the class to keep the flyout effect with every new click
+  $('#flyout img').attr('src', 'img/' + src)
+  /* Removing the class to keep the flyout effect with every new click */
   setTimeout(function() {
-    $('#flyout').removeClass('animated');
+    flyout.removeClass('animated');
   },500);
 });
 
-// Resetting the properties
+/* Resetting the properties */
 $('#flyout').on('click', function() {
-  if (!$(this).hasClass('hidden')) {
-    $(this).addClass('hidden')
-    $(this).removeClass('animated')
+  let el = $(this);
+
+  if (!el.hasClass('hidden')) {
+    el.addClass('hidden')
+    el.removeClass('animated')
   }
 })
