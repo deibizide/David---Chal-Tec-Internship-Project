@@ -33,13 +33,13 @@ $('img').on('click', function() {
 
   $('#flyout img').attr('src', 'img/' + src)
 
-// Removing the class to keep the flyout effect with every new click
+  /* Removing the class to keep the flyout effect with every new click */
   setTimeout(function() {
     $('#flyout').removeClass('animated');
   },500);
 });
 
-// Resetting the properties
+/* Resetting the properties */
 $('#flyout').on('click', function() {
   if (!$(this).hasClass('hidden')) {
     $(this).addClass('hidden')
