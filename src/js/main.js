@@ -31,7 +31,7 @@ $('img').on('click', function() {
   clickedSrc = $(this).data('imgsrc')
   src = `${clickedSrc}.jpeg`
 
-  $('#flyout img').attr('src', src)
+  $('#flyout img').attr('src', 'img/' + src)
 
 // Removing the class to keep the flyout effect with every new click
   setTimeout(function() {
